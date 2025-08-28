@@ -5,7 +5,7 @@ services:
     container_name: xmrig-proxy
     environment:
       - POOL=<your pool url>
-      - WALLET=<your username of wallet here>
+      - USER=<your username or wallet here>
       - PASSWORD=<your password on pool>
       - ALGO=<needed mining algorithm>
     ports:
