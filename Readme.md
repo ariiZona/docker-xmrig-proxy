@@ -1,12 +1,19 @@
 # XMRig Proxy Docker Image
 
-![Docker Pulls](https://img.shields.io/docker/pulls/molecul/xmrig-proxy) ![Docker Build Status](https://img.shields.io/docker/build/molecul/xmrig-proxy) 
+![Docker Pulls](https://img.shields.io/docker/pulls/ariizona/xmrig-proxy) ![Docker Build Status](https://img.shields.io/docker/build/ariizona/xmrig-proxy) 
 
 This image contain the [latest version](https://github.com/xmrig/xmrig-proxy/releases/latest) of [xmrig-proxy](https://xmrig.com/proxy). 
 
 ## Usage
 
+Easy:
+Edit and use included docker-compose file !
+
+Start with `docker compose up -d`
+
 **⚠️You should set environment variables before run it!⚠️**
+
+*OR* 
 
 Start it with docker run command:
 

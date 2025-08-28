@@ -1,9 +1,14 @@
 FROM ubuntu:jammy
 
-RUN apt-get update && apt-get install -y curl
+ARG XMRIG_PROXY_VERSION
 
-ADD get-latest-version.sh .
-RUN bash get-latest-version.sh
+RUN apt-get update && apt-get install -y curl wget tar
+
+WORKDIR /xmrig-proxy
+
+RUN wget https://github.com/xmrig/xmrig-proxy/releases/download/${XMRIG_PROXY_VERSION}/xmrig-proxy-${XMRIG_PROXY_VERSION#v}-jammy-x64.tar.gz && \
+    tar -xvf xmrig-proxy-${XMRIG_PROXY_VERSION#v}-jammy-x64.tar.gz --strip-components=1 && \
+    rm xmrig-proxy-${XMRIG_PROXY_VERSION#v}-jammy-x64.tar.gz
 
 ENV USER NaN
 ENV POOL pool.supportxmr.com:5555
