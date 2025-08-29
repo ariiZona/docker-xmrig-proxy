@@ -1,7 +1,11 @@
 services:
   xmrig-proxy:
     image: ariizona/xmrig-proxy:latest
-    build: .
+    build:
+      context: .
+      args:
+      # If building, sets version (see https://github.com/xmrig/xmrig-proxy/releases)
+        XMRIG_PROXY_VERSION: v6.24.0
     container_name: xmrig-proxy
     environment:
       - POOL=<your pool url>
