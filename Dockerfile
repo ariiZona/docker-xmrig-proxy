@@ -17,8 +17,9 @@ ENV ALGO rx/0
 ENV DONATE_LEVEL 0
 ENV RETRY_SWITCH_POOL 5
 ENV RETRY_TIMEOUT_SECONDS 5
+ENV MODE nicehash
 
 EXPOSE 3333/tcp
 EXPOSE 3334/tcp
 
-ENTRYPOINT ./xmrig-proxy --donate-level=$DONATE_LEVEL -r $RETRY_SWITCH_POOL -R $RETRY_TIMEOUT_SECONDS -b 0.0.0.0:3333 --http-enabled --http-host=0.0.0.0 --http-port=3334 -o $POOL -u $USER -p $PASSWORD --algo=$ALGO
+ENTRYPOINT ./xmrig-proxy --donate-level=$DONATE_LEVEL -r $RETRY_SWITCH_POOL -R $RETRY_TIMEOUT_SECONDS -b 0.0.0.0:3333 --http-enabled --http-host=0.0.0.0 --http-port=3334 -o $POOL -u $USER -p $PASSWORD --algo=$ALGO --mode=$MODE

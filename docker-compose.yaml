@@ -11,7 +11,8 @@ services:
       - POOL=<your pool url>
       - USER=<your username of wallet here>
       - PASSWORD=<your password on pool>
-      - ALGO=<needed mining algorithm>      
+      - ALGO=<needed mining algorithm>  
+    #  - MODE=<supports: nicehash (default), simple, proxy>
     ports:
       - "3333:3333"
       - "3334:3334"
