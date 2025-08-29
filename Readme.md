@@ -1,6 +1,6 @@
 # XMRig Proxy Docker Image
 
-![Docker Pulls](https://img.shields.io/docker/pulls/ariizona/xmrig-proxy) ![Docker Build Status](https://img.shields.io/docker/build/ariizona/xmrig-proxy) 
+![Docker Pulls](https://img.shields.io/docker/pulls/ariizona/xmrig-proxy) ![Docker Latest Build](https://img.shields.io/docker/v/ariizona/xmrig-proxy?sort=semver) 
 
 This image contain the [latest version](https://github.com/xmrig/xmrig-proxy/releases/latest) of [xmrig-proxy](https://xmrig.com/proxy). 
 
